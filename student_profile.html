@@ -1,0 +1,14 @@
+
+{% extends "base.html" %}
+{% block content %}
+<div class="content-card">
+    <h2>👤 My Profile</h2>
+    {% if student %}
+        {% for key, value in student.items() %}
+        <p><strong>{{ key|replace('_',' ')|title }}:</strong> {{ value if value is not none else '-' }}</p>
+        {% endfor %}
+    {% else %}
+        <p>No student profile was found for this account.</p>
+    {% endif %}
+</div>
+{% endblock %}

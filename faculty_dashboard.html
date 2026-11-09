@@ -1,0 +1,45 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="welcome-banner">
+    <div>
+        <span class="eyebrow">FACULTY PORTAL</span>
+        <h1>Welcome, {{ session.username }}!</h1>
+        <p>Your academic workspace at Campus Connect.</p>
+    </div>
+    <div class="banner-icon">👨‍🏫</div>
+</div>
+
+<div class="stats-grid">
+    <div class="stat-card"><span>👨‍🎓</span><h3>Students</h3><p>Student information</p></div>
+    <div class="stat-card"><span>📢</span><h3>Announcements</h3><p>Academic updates</p></div>
+    <div class="stat-card"><span>📅</span><h3>Activities</h3><p>Campus activities</p></div>
+</div>
+
+<div class="section-heading" id="overview">
+    <h2>Faculty Workspace</h2>
+    <p>Access your academic services.</p>
+</div>
+
+<div class="content-grid">
+    <div class="content-card" id="profile">
+        <h3>👤 My Profile</h3>
+        <p>View faculty account information.</p>
+    </div>
+    <div class="content-card" id="students">
+        <h3>👨‍🎓 Students</h3>
+        <p>Access permitted student information.</p>
+    </div>
+    <div class="content-card" id="announcements">
+        <h3>📢 Announcements</h3>
+        <p>View academic announcements.</p>
+    </div>
+    <div class="content-card" id="activities">
+        <h3>📅 Activities</h3>
+        <p>View campus activities and events.</p>
+    </div>
+</div>
+
+{% endblock %}

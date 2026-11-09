@@ -1,0 +1,50 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="welcome-banner">
+    <div>
+        <span class="eyebrow">CAMPUS OPERATIONS</span>
+        <h1>Welcome, {{ session.username }}!</h1>
+        <p>Manage campus information and activities.</p>
+    </div>
+    <div class="banner-icon">⚙️</div>
+</div>
+
+<div class="stats-grid">
+    <div class="stat-card"><span>🎓</span><h3>Students</h3><p>Student records</p></div>
+    <div class="stat-card"><span>👨‍🏫</span><h3>Faculty</h3><p>Faculty records</p></div>
+    <div class="stat-card"><span>🏢</span><h3>Departments</h3><p>Department records</p></div>
+    <div class="stat-card"><span>📢</span><h3>Announcements</h3><p>Campus updates</p></div>
+</div>
+
+<div class="section-heading" id="overview">
+    <h2>Management Workspace</h2>
+    <p>Campus content management services.</p>
+</div>
+
+<div class="content-grid">
+    <div class="content-card" id="students">
+        <h3>🎓 Student Management</h3>
+        <p>Manage student records.</p>
+    </div>
+    <div class="content-card" id="faculty">
+        <h3>👨‍🏫 Faculty Management</h3>
+        <p>Manage faculty records.</p>
+    </div>
+    <div class="content-card" id="departments">
+        <h3>🏢 Departments</h3>
+        <p>Manage department information.</p>
+    </div>
+    <div class="content-card" id="events">
+        <h3>📅 Events</h3>
+        <p>Manage campus events.</p>
+    </div>
+    <div class="content-card" id="clubs">
+        <h3>👥 Clubs</h3>
+        <p>Manage campus clubs.</p>
+    </div>
+</div>
+
+{% endblock %}

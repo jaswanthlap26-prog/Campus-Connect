@@ -1,0 +1,30 @@
+
+{% extends "base.html" %}
+{% block content %}
+<div class="content-card">
+    <h2>💬 Student Feedback</h2>
+
+    {% if error %}
+        <p class="login-error">{{ error }}</p>
+    {% endif %}
+
+    {% if success %}
+        <p>{{ success }}</p>
+    {% endif %}
+
+    <form method="POST">
+        <label for="feedback">Your feedback</label>
+        <textarea
+            id="feedback"
+            name="feedback"
+            rows="6"
+            required
+            maxlength="2000"
+            placeholder="Share your suggestions..."></textarea>
+
+        <button type="submit" class="login-button">
+            Submit Feedback
+        </button>
+    </form>
+</div>
+{% endblock %}

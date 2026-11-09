@@ -1,0 +1,46 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="welcome-banner admin-banner">
+    <div>
+        <span class="eyebrow">SUPER ADMINISTRATOR</span>
+        <h1>Welcome, {{ session.username }}!</h1>
+        <p>Security, account oversight and system monitoring.</p>
+    </div>
+    <div class="banner-icon">🛡️</div>
+</div>
+
+<div class="stats-grid">
+    <div class="stat-card"><span>👤</span><h3>Accounts</h3><p>Account monitoring</p></div>
+    <div class="stat-card"><span>🔐</span><h3>Security</h3><p>Security oversight</p></div>
+    <div class="stat-card"><span>📋</span><h3>Audit Logs</h3><p>System activity records</p></div>
+</div>
+
+<div class="section-heading" id="overview">
+    <h2>System Administration</h2>
+    <p>Monitor platform security and account activity.</p>
+</div>
+
+<div class="content-grid">
+    <div class="content-card" id="accounts">
+        <h3>👤 Account Monitoring</h3>
+        <p>Monitor account status and access.</p>
+    </div>
+    <div class="content-card" id="security">
+        <h3>🔐 Security Centre</h3>
+        <p>Review security settings and access controls.</p>
+    </div>
+    <div class="content-card" id="audit">
+        <h3>📋 Audit Logs</h3>
+        <p>Review recorded system activity.</p>
+    </div>
+</div>
+
+<div class="security-notice">
+    🛡️ Super Admin is a security oversight role.
+    Campus content editing is reserved for authorized Operators.
+</div>
+
+{% endblock %}

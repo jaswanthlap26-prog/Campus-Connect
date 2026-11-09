@@ -1,0 +1,158 @@
+```html
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- WELCOME SECTION -->
+<section class="student-hero">
+
+    <div class="hero-content">
+        <span class="hero-label">STUDENT DASHBOARD</span>
+
+        <h1>Welcome back, {{ session.get('username', 'Student') }}! 👋</h1>
+
+        <p>
+            Your campus journey starts here.
+            Stay informed, explore opportunities and make every day count.
+        </p>
+
+        <a href="{{ url_for('student_profile') }}" class="hero-button">
+            View My Profile →
+        </a>
+    </div>
+
+    <div class="hero-visual">
+        <div class="hero-circle">🎓</div>
+        <span class="hero-decoration decoration-one">📚</span>
+        <span class="hero-decoration decoration-two">✨</span>
+    </div>
+
+</section>
+
+
+<!-- OVERVIEW -->
+<section class="dashboard-section">
+
+    <div class="dashboard-section-heading">
+        <div>
+            <span class="section-eyebrow">YOUR CAMPUS</span>
+            <h2>Campus Overview</h2>
+            <p>Everything you need in one place.</p>
+        </div>
+    </div>
+
+
+    <!-- STATISTICS -->
+    <div class="student-stats-grid">
+
+        <a href="{{ url_for('student_events') }}" class="student-stat-card">
+            <div class="stat-icon event-icon">📅</div>
+            <div>
+                <h3>Campus Events</h3>
+                <p>Explore upcoming events</p>
+            </div>
+            <span class="stat-arrow">→</span>
+        </a>
+
+        <a href="{{ url_for('student_clubs') }}" class="student-stat-card">
+            <div class="stat-icon club-icon">👥</div>
+            <div>
+                <h3>Student Clubs</h3>
+                <p>Discover communities</p>
+            </div>
+            <span class="stat-arrow">→</span>
+        </a>
+
+        <a href="{{ url_for('student_quizzes') }}" class="student-stat-card">
+            <div class="stat-icon quiz-icon">📝</div>
+            <div>
+                <h3>Quizzes</h3>
+                <p>Test your knowledge</p>
+            </div>
+            <span class="stat-arrow">→</span>
+        </a>
+
+        <a href="{{ url_for('student_feedback') }}" class="student-stat-card">
+            <div class="stat-icon feedback-icon">💬</div>
+            <div>
+                <h3>Feedback</h3>
+                <p>Share your suggestions</p>
+            </div>
+            <span class="stat-arrow">→</span>
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- QUICK ACCESS -->
+<section class="dashboard-section">
+
+    <div class="dashboard-section-heading">
+        <div>
+            <span class="section-eyebrow">QUICK ACCESS</span>
+            <h2>Explore Campus Connect</h2>
+            <p>Access your student services quickly.</p>
+        </div>
+    </div>
+
+    <div class="student-feature-grid">
+
+        <a href="{{ url_for('student_profile') }}" class="student-feature-card">
+            <div class="feature-icon">👤</div>
+            <h3>My Profile</h3>
+            <p>View your personal and academic information.</p>
+            <span>View Profile →</span>
+        </a>
+
+        <a href="{{ url_for('student_events') }}" class="student-feature-card">
+            <div class="feature-icon">🎉</div>
+            <h3>Campus Events</h3>
+            <p>Find workshops, seminars and competitions.</p>
+            <span>Explore Events →</span>
+        </a>
+
+        <a href="{{ url_for('student_clubs') }}" class="student-feature-card">
+            <div class="feature-icon">🤝</div>
+            <h3>Student Clubs</h3>
+            <p>Connect with students who share your interests.</p>
+            <span>Explore Clubs →</span>
+        </a>
+
+        <a href="{{ url_for('student_quizzes') }}" class="student-feature-card">
+            <div class="feature-icon">🧠</div>
+            <h3>Online Quizzes</h3>
+            <p>Practice questions and improve your knowledge.</p>
+            <span>Start Learning →</span>
+        </a>
+
+        <a href="{{ url_for('student_feedback') }}" class="student-feature-card">
+            <div class="feature-icon">✉️</div>
+            <h3>Feedback</h3>
+            <p>Help us improve your campus experience.</p>
+            <span>Give Feedback →</span>
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- CAMPUS MESSAGE -->
+<section class="student-message">
+
+    <div class="message-icon">🌟</div>
+
+    <div>
+        <h3>Make the most of your campus life!</h3>
+        <p>
+            Participate in events, join clubs, challenge yourself
+            with quizzes and stay connected with your college community.
+        </p>
+    </div>
+
+</section>
+
+{% endblock %}
+```
